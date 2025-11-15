@@ -2,15 +2,24 @@
 
 :root {
     --white: #FFFFFF;
+    --black: #000000;
     --yellow: #F4D04E;
     --gray-950: #111111;
     --gray-500: #6B6B6B;
+    font-size: 14px;
+}
+
+@media (min-width: 48em) {
+    :root {
+        font-size: 16px;
+    }
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: var(--yellow);
+    color: var(--gray-950);
     font-family: 'Figtree', sans-serif;
     height: 100vh;
     display: flex;
@@ -23,9 +32,10 @@ body {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 24rem;
+    max-width: 20rem;
     padding: 1.5rem;
-    /*gap: 1rem;*/
+    border: 2px solid var(--black);
+    box-shadow: 0.5rem 0.5rem 0 var(--black);
 }
 
 .article-illustration {
@@ -39,15 +49,53 @@ body {
     color: var(--gray-950);
     padding: 0.5rem;
     width: auto;
+    margin-bottom: 0.8rem;
+
 }
 
-.bold {
+.publish-date {
+    font-size: 0.9rem;
+}
+
+.title {
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.extra-bold {
     font-weight: 900;
 }
 
-.text-preset-1 {
-    font-family: 'Figtree', sans-serif;
-    font-size: 1rem;
-    line-height: 150%;
+.medium-weight {
+    font-weight: 500;
+}
+
+.color-gray-950 {
     color: var(--gray-950);
+}
+
+.color-gray-500 {
+    color: var(--gray-500);
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-profile-picture {
+    border-radius: 50%;
+    background-image: url("public/user.png");
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
 }
